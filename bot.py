@@ -37,8 +37,8 @@ def start_handler(m):
     else:
         kb = types.InlineKeyboardMarkup()
         kb.add(types.InlineKeyboardButton("✅ Join Done", callback_data='check_join'))
-        bot.send_message(uid, f"🔔 প্রথমে আমাদের চ্যানেল Join করুন:
-{CHANNEL}", reply_markup=kb)
+        bot.send_message(uid, f"🔔 প্রথমে আমাদের চ্যানেল Join করুন:\n{CHANNEL}", reply_markup=kb)
+
 
 @bot.callback_query_handler(func=lambda c: c.data == 'check_join')
 def check_join_cb(c):
